@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แอปแบ่งค่าใช้จ่ายแบบละเอียด</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>แอปแบ่งค่าใช้จ่ายแบบละเอียด</h1>
+    
+    <div>
+        <h2>เพิ่มสมาชิก</h2>
+        <input type="text" id="newMember" placeholder="ชื่อสมาชิก">
+        <button onclick="addMember()">เพิ่มสมาชิก</button>
+    </div>
+
+    <div>
+        <h2>เพิ่มค่าใช้จ่าย</h2>
+        <input type="text" id="expenseDescription" placeholder="รายการ">
+        <input type="number" id="expenseAmount" placeholder="จำนวนเงิน" min="0" step="0.01">
+        <select id="expensePayer"></select>
+        <button onclick="addExpense()">เพิ่มค่าใช้จ่าย</button>
+    </div>
+
+    <div id="expenseList">
+        <h2>รายการค่าใช้จ่าย</h2>
+        <table id="expenseTable">
+            <tr>
+                <th>รายการ</th>
+                <th>จำนวนเงิน</th>
+                <th>ผู้จ่าย</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="summary">
+        <h2>สรุปการชำระเงิน</h2>
+        <div id="summaryResult"></div>
+    </div>
+
+    <div id="detailedTransactions">
+        <h2>รายละเอียดการชำระเงินระหว่างสมาชิก</h2>
+        <div id="transactionDetails"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
